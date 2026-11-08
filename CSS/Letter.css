@@ -1,0 +1,296 @@
+
+/* ==============================
+   基本設定
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #FFF5F8;
+    color: #59444D;
+
+    font-family: "Zen Maru Gothic", sans-serif;
+}
+
+
+/* ==============================
+   ヘッダー
+============================== */
+
+.site-header {
+    width: 100%;
+    background-color: #FFFFFF;
+
+    border-bottom: 2px solid #F5D5E1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    color: #D879A2;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header-nav a {
+    color: #92516F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   メインビジュアル
+============================== */
+
+.hero {
+    width: 100%;
+    min-height: 400px;
+
+    padding: 70px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #FCE4ED,
+        #FFF5F8,
+        #F9DFE9
+    );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    color: #C16C92;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    color: #A64F78;
+    font-family: "Kiwi Maru", serif;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.6;
+}
+
+.hero-description {
+    color: #92516F;
+    font-size: 15px;
+}
+
+.hero-decoration {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+
+/* ==============================
+   共通セクション
+============================== */
+
+.about-section,
+.letter-section {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 0 25px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    color: #D879A2;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: #A64F78;
+    font-size: 26px;
+    font-family: "Kiwi Maru", serif;
+}
+
+.section-description {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ==============================
+   郵便屋さんの説明
+============================== */
+
+.about-card {
+    background-color: #FFFFFF;
+
+    padding: 30px;
+    border-radius: 18px;
+
+    border: 2px solid #F5D5E1;
+
+    box-shadow: 0 5px 15px rgba(180, 100, 140, 0.08);
+
+    text-align: center;
+    line-height: 2;
+}
+
+
+/* ==============================
+   寄せ書き案内
+============================== */
+
+.letter-link-card {
+    background-color: #FFFFFF;
+
+    max-width: 550px;
+    margin: auto;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border: 2px solid #F5D5E1;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(180, 100, 140, 0.08);
+}
+
+.letter-icon {
+    font-size: 55px;
+}
+
+.letter-link-card h3 {
+    color: #A64F78;
+    font-size: 22px;
+}
+
+.letter-link-card p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.letter-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 14px 35px;
+
+    background-color: #E99AB9;
+    color: #FFFFFF;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.letter-button:hover {
+    background-color: #D879A2;
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   フッター
+============================== */
+
+.site-footer {
+    padding: 30px 15px;
+
+    background-color: #FCE4ED;
+
+    text-align: center;
+    color: #A64F78;
+}
+
+.site-footer p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.site-footer small {
+    font-size: 12px;
+}
+
+
+/* ==============================
+   スマートフォン対応
+============================== */
+
+@media screen and (max-width: 600px) {
+
+    .header-inner {
+        padding: 12px 15px;
+    }
+
+    .site-logo {
+        font-size: 18px;
+    }
+
+    .header-nav {
+        gap: 12px;
+    }
+
+    .header-nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 330px;
+        padding: 50px 15px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .about-section,
+    .letter-section {
+        margin: 50px auto;
+        padding: 0 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+    .about-card {
+        padding: 22px 18px;
+    }
+
+    .letter-link-card {
+        padding: 25px 18px;
+    }
+
+}
