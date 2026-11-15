@@ -764,7 +764,6 @@ main,
 }
 
 
-
 /* =========================
    7枚の写真コラージュ
 ========================= */
@@ -780,6 +779,9 @@ main,
 /* 写真の共通設定 */
 .collage-photo {
     position: absolute;
+    left: 50%;
+    top: 50%;
+
     width: 125px;
     height: 125px;
     padding: 6px;
@@ -800,64 +802,55 @@ main,
     border-radius: 4px;
 }
 
-/* 7枚を少しずつずらして配置 */
+/* 1枚目 */
 .photo-1 {
-    left: 0;
-    top: 65px;
-    transform: rotate(-10deg);
+    transform: translate(-270%, -35%) rotate(-10deg);
     z-index: 1;
 }
 
+/* 2枚目 */
 .photo-2 {
-    left: 82px;
-    top: 10px;
-    transform: rotate(7deg);
+    transform: translate(-200%, -85%) rotate(7deg);
     z-index: 1;
 }
 
+/* 3枚目 */
 .photo-3 {
-    left: 166px;
-    top: 70px;
-    transform: rotate(-6deg);
+    transform: translate(-130%, -30%) rotate(-6deg);
     z-index: 3;
 }
 
-.photo-4 {
-    left: 520px;
-    top: 70px;
-    transform: rotate(10deg);
-    z-index: 1;
-}
-
-.photo-5 {
-    left: 355px;
-    top: 75px;
-    transform: rotate(8deg);
-    z-index: 3;
-}
-
-.photo-6 {
-    left: 435px;
-    top: 12px;
-    transform: rotate(-7deg);
-    z-index: 2;
-}
-
+/* 7枚目：中央のメイン写真 */
 .photo-7 {
-    left: 250px;
-    top: 5px;
     width: 140px;
     height: 140px;
-    transform: rotate(4deg);
+    transform: translate(-50%, -90%) rotate(4deg);
     z-index: 4;
 }
 
+/* 5枚目 */
+.photo-5 {
+    transform: translate(20%, -25%) rotate(8deg);
+    z-index: 3;
+}
+
+/* 6枚目 */
+.photo-6 {
+    transform: translate(90%, -85%) rotate(-7deg);
+    z-index: 2;
+}
+
+/* 4枚目 */
+.photo-4 {
+    transform: translate(175%, -35%) rotate(10deg);
+    z-index: 1;
+}
 
 /* ハート */
 .collage-heart {
     position: absolute;
     top: 0;
-    left: 85px;
+    left: 18%;
     z-index: 5;
     color: #ED83AA;
     font-size: 32px;
@@ -867,7 +860,7 @@ main,
 /* 封筒 */
 .collage-envelope {
     position: absolute;
-    right: 25px;
+    right: 15%;
     bottom: 0;
     z-index: 5;
     font-size: 38px;
@@ -877,7 +870,7 @@ main,
 /* 切手風装飾 */
 .collage-stamp {
     position: absolute;
-    left: 10px;
+    left: 5%;
     bottom: 0;
     z-index: 5;
 
@@ -894,6 +887,74 @@ main,
 
     transform: rotate(-8deg);
 }
+
+/* スマートフォン対応 */
+@media screen and (max-width: 600px) {
+
+    .hero-collage {
+        max-width: 340px;
+        height: 190px;
+        margin: 25px auto 10px;
+    }
+
+    .collage-photo {
+        width: 78px;
+        height: 78px;
+        padding: 4px;
+    }
+
+    .photo-1 {
+        transform: translate(-210%, 5%) rotate(-10deg);
+    }
+
+    .photo-2 {
+        transform: translate(-155%, -75%) rotate(7deg);
+    }
+
+    .photo-3 {
+        transform: translate(-100%, 15%) rotate(-6deg);
+    }
+
+    .photo-4 {
+        width: 90px;
+        height: 90px;
+        transform: translate(-50%, -85%) rotate(4deg);
+    }
+
+    .photo-5 {
+        transform: translate(0%, 20%) rotate(8deg);
+    }
+
+    .photo-6 {
+        transform: translate(55%, -75%) rotate(-7deg);
+    }
+
+    .photo-7 {
+        transform: translate(110%, 5%) rotate(10deg);
+    }
+
+    .collage-heart {
+        left: 10%;
+        top: 0;
+        font-size: 24px;
+    }
+
+    .collage-envelope {
+        right: 5%;
+        bottom: 0;
+        font-size: 27px;
+    }
+
+    .collage-stamp {
+        left: 0;
+        bottom: 0;
+        font-size: 7px;
+        padding: 5px;
+    }
+
+}
+
+
 
 /* スマホ表示 */
 @media screen and (max-width: 600px) {
