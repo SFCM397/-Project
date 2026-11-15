@@ -442,10 +442,14 @@ body {
     color: #59444D;
 
     font-size: 15px;
-    line-height: 2.5;
+    line-height: 2;
 
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
+    /* 左揃え */
+    text-align: left;
+
+    /* 文章を自然に折り返す */
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .letter-sign {
@@ -579,9 +583,14 @@ body {
 
 .letter-content {
     font-size: 17px;
-    line-height: 2.5;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
+    line-height: 2;
+
+    /* 左揃え */
+    text-align: left;
+
+    /* スクリプト内の改行や空行を詰める */
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .letter-close-button {
