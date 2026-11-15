@@ -762,3 +762,208 @@ main,
     }
 
 }
+
+
+
+/* =========================
+   7枚の写真コラージュ
+========================= */
+
+.hero-collage {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    height: 245px;
+    margin: 35px auto 10px;
+}
+
+/* 写真の共通設定 */
+.collage-photo {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    padding: 6px;
+
+    background: #FFFFFF;
+    border: 1px solid #F7D5E3;
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(150, 90, 120, 0.18);
+}
+
+/* 写真本体 */
+.collage-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* 7枚を少しずつずらして配置 */
+.photo-1 {
+    left: 0;
+    top: 65px;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+.photo-2 {
+    left: 82px;
+    top: 10px;
+    transform: rotate(7deg);
+    z-index: 1;
+}
+
+.photo-3 {
+    left: 166px;
+    top: 70px;
+    transform: rotate(-6deg);
+    z-index: 3;
+}
+
+.photo-4 {
+    left: 520px;
+    top: 70px;
+    transform: rotate(10deg);
+    z-index: 1;
+}
+
+.photo-5 {
+    left: 355px;
+    top: 75px;
+    transform: rotate(8deg);
+    z-index: 3;
+}
+
+.photo-6 {
+    left: 435px;
+    top: 12px;
+    transform: rotate(-7deg);
+    z-index: 2;
+}
+
+.photo-7 {
+    left: 250px;
+    top: 5px;
+    width: 140px;
+    height: 140px;
+    transform: rotate(4deg);
+    z-index: 4;
+}
+
+
+/* ハート */
+.collage-heart {
+    position: absolute;
+    top: 0;
+    left: 95px;
+    z-index: 5;
+    color: #ED83AA;
+    font-size: 32px;
+    transform: rotate(-15deg);
+}
+
+/* 封筒 */
+.collage-envelope {
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+    z-index: 5;
+    font-size: 38px;
+    transform: rotate(12deg);
+}
+
+/* 切手風装飾 */
+.collage-stamp {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    z-index: 5;
+
+    padding: 7px 9px;
+    background: #FFF8FB;
+    border: 2px dashed #E9A5C0;
+    border-radius: 5px;
+
+    color: #C66D93;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+
+    transform: rotate(-8deg);
+}
+
+/* スマホ表示 */
+@media screen and (max-width: 600px) {
+
+    .hero-collage {
+        max-width: 340px;
+        height: 190px;
+        margin-top: 25px;
+    }
+
+    .collage-photo {
+        width: 78px;
+        height: 78px;
+        padding: 4px;
+    }
+
+    .photo-1 {
+        left: 0;
+        top: 65px;
+    }
+
+    .photo-2 {
+        left: 43px;
+        top: 15px;
+    }
+
+    .photo-3 {
+        left: 86px;
+        top: 75px;
+    }
+
+    .photo-4 {
+        left: 129px;
+        top: 10px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .photo-5 {
+        left: 172px;
+        top: 80px;
+    }
+
+    .photo-6 {
+        left: 215px;
+        top: 15px;
+    }
+
+    .photo-7 {
+        left: 258px;
+        top: 70px;
+    }
+
+    .collage-heart {
+        left: 30px;
+        top: 0;
+        font-size: 24px;
+    }
+
+    .collage-envelope {
+        right: 5px;
+        bottom: 0;
+        font-size: 27px;
+    }
+
+    .collage-stamp {
+        left: 0;
+        bottom: 0;
+        font-size: 7px;
+        padding: 5px;
+    }
+
+}
