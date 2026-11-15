@@ -1,4 +1,3 @@
-
 /* ==============================
    基本設定
 ============================== */
@@ -74,12 +73,10 @@ body {
 
     text-align: center;
 
-    background: linear-gradient(
-        135deg,
-        #FCE4ED,
-        #FFF5F8,
-        #F9DFE9
-    );
+    background: linear-gradient(135deg,
+            #FCE4ED,
+            #FFF5F8,
+            #F9DFE9);
 }
 
 .hero-content {
@@ -291,6 +288,477 @@ body {
 
     .letter-link-card {
         padding: 25px 18px;
+    }
+
+}
+
+
+
+/* ==============================
+   お手紙ページ
+============================== */
+
+.letters-hero {
+    padding: 65px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(135deg,
+            #FCE4ED,
+            #FFF5F8,
+            #F9DFE9);
+}
+
+.letters-hero h1 {
+    color: #A64F78;
+    font-family: "Kiwi Maru", serif;
+    font-size: clamp(25px, 4vw, 38px);
+}
+
+.letters-hero p {
+    line-height: 1.9;
+}
+
+.letters-decoration {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.letters-section {
+    max-width: 1000px;
+    margin: 65px auto;
+    padding: 0 25px;
+}
+
+
+/* ==============================
+   封筒一覧
+============================== */
+
+.envelope-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.envelope-card {
+    padding: 30px 15px;
+
+    background: #FFFFFF;
+
+    border: 2px solid #F5D5E1;
+    border-radius: 18px;
+
+    box-shadow: 0 5px 15px rgba(180, 100, 140, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: 0.25s;
+}
+
+.envelope-card:hover {
+    transform: translateY(-5px);
+
+    background: #FFF1F6;
+
+    border-color: #E99AB9;
+}
+
+.envelope-icon {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+.envelope-name {
+    color: #A64F78;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.envelope-guide {
+    margin-top: 8px;
+
+    color: #B77A95;
+    font-size: 12px;
+}
+
+
+/* ==============================
+   手紙表示エリア
+============================== */
+
+.letter-view {
+    max-width: 700px;
+    margin: 45px auto 0;
+}
+
+.letter-paper {
+    padding: 45px 40px;
+
+    background: #FFFEFC;
+
+    border: 2px solid #F0D8C8;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(120, 80, 80, 0.1);
+
+    background-image:
+        repeating-linear-gradient(transparent,
+            transparent 39px,
+            #F4E8E3 40px);
+}
+
+.letter-paper-subtitle {
+    color: #D879A2;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.letter-paper h2 {
+    color: #A64F78;
+    text-align: center;
+    font-family: "Kiwi Maru", serif;
+}
+
+.letter-divider {
+    margin: 25px 0;
+
+    color: #D879A2;
+    text-align: center;
+}
+
+.letter-content {
+    min-height: 200px;
+
+    color: #59444D;
+
+    font-size: 15px;
+    line-height: 2.5;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.letter-sign {
+    margin-top: 35px;
+
+    color: #D879A2;
+
+    text-align: right;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   閉じるボタン
+============================== */
+
+.letter-close-button {
+    display: block;
+
+    margin: 25px auto 0;
+    padding: 13px 28px;
+
+    background: #E99AB9;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 30px;
+
+    font-family: inherit;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.letter-close-button:hover {
+    background: #D879A2;
+}
+
+
+/* ==============================
+   スマートフォン対応
+============================== */
+
+@media screen and (max-width: 600px) {
+
+    .letters-hero {
+        padding: 45px 15px;
+    }
+
+    .letters-section {
+        margin: 45px auto;
+        padding: 0 18px;
+    }
+
+    .envelope-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .envelope-card {
+        padding: 23px 10px;
+    }
+
+    .envelope-icon {
+        font-size: 43px;
+    }
+
+    .envelope-name {
+        font-size: 14px;
+    }
+
+    .letter-paper {
+        padding: 30px 20px;
+    }
+
+    .letter-content {
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==============================
+   手紙の全画面表示
+============================== */
+
+.letter-view[hidden] {
+    display: none;
+}
+
+.letter-view {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    width: 100%;
+    height: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 25px;
+
+    background: rgba(255, 235, 243, 0.97);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y: auto;
+}
+
+.letter-paper {
+    width: 100%;
+    max-width: 850px;
+
+    min-height: 65vh;
+
+    padding: 55px 60px;
+
+    background-color: #FFFEFC;
+
+    border: 2px solid #F0D8C8;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 35px rgba(120, 80, 80, 0.15);
+}
+
+.letter-content {
+    font-size: 17px;
+    line-height: 2.5;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.letter-close-button {
+    margin-top: 25px;
+    flex-shrink: 0;
+}
+
+
+/* スマートフォン */
+
+@media screen and (max-width: 600px) {
+
+    .letter-view {
+        padding: 15px;
+    }
+
+    .letter-paper {
+        min-height: 75vh;
+        padding: 35px 22px;
+    }
+
+    .letter-content {
+        font-size: 15px;
+        line-height: 2.3;
+    }
+
+}
+
+/* 締めのメッセージを中央揃え */
+.letter-footer-message {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* WITH ALL MY LOVE */
+.letter-footer-message p {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* 郵便屋さんの名前 */
+.letter-footer-message small {
+    display: block;
+    text-align: center;
+}
+
+/* フッターの注意書き */
+.footer-notice {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #777;
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 1px solid #f5dce6;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 13px;
+    margin: 20px auto;
+}
+
+/* 注意書きを中央に配置 */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* メンバーの写真 */
+.member-photo {
+    display: block;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 3px 10px rgba(150, 100, 120, 0.2);
+}
+
+/* スマホ表示 */
+@media screen and (max-width: 600px) {
+    .member-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* =========================
+   背景写真スライド
+========================= */
+
+/* 背景写真全体 */
+.photo-background {
+    position: fixed;
+
+    /* ヘッダーの下から表示 */
+    top: 85px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* 写真が流れる列 */
+.photo-track {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 写真を横一列に並べる */
+.photo-track-inner {
+    display: flex;
+    width: max-content;
+    gap: 25px;
+    animation: photo-slide 55s linear infinite;
+}
+
+/* 反対方向に流す */
+.photo-track.reverse .photo-track-inner {
+    animation-direction: reverse;
+}
+
+/* 写真の大きさ */
+.photo-track img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #ffffff;
+}
+
+/* 横方向に移動 */
+@keyframes photo-slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ページの内容を背景より手前に配置 */
+.site-header,
+main,
+.site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* スマホ表示 */
+@media screen and (max-width: 600px) {
+
+    .photo-track img {
+        width: 120px;
+        height: 85px;
+    }
+
+    .photo-track-inner {
+        gap: 15px;
+        animation-duration: 45s;
+    }
+
+}
+
+/* スマホ表示 */
+@media screen and (max-width: 600px) {
+
+    .photo-background {
+        top: 70px;
     }
 
 }

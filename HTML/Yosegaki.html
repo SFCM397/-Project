@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>みんなからのお手紙｜郵便屋さん</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="../CSS/Letter.css">
+
+</head>
+
+<body>
+
+    <!-- 背景で流れる写真 -->
+    <div class="photo-background">
+
+        <!-- 1段目 -->
+        <div class="photo-track">
+            <div class="photo-track-inner">
+                <img src="../img/Mail/Sakunaimg-01.webp" alt="">
+                <img src="../img/Mail/Sakunaimg-02.png" alt="">
+                <img src="../img/Mail/Sakunaimg-03.png" alt="">
+                <img src="../img/Mail/Yuubininmg-01.png" alt="">
+                <img src="../img/Mail/Yuubininmg-02.png" alt="">
+                <img src="../img/Mail/Yuubininmg-03.png" alt="">
+                <img src="../img/Mail/headerimg-01.png" alt="">
+                <img src="../img/Mail/headerimg-02.png" alt="">
+                <img src="../img/Mail/headerimg-03.png" alt="">
+
+                <!-- 繰り返し用 -->
+                <img src="../img/Mail/Sakunaimg-01.webp" alt="">
+                <img src="../img/Mail/Sakunaimg-02.png" alt="">
+                <img src="../img/Mail/Sakunaimg-03.png" alt="">
+                <img src="../img/Mail/Yuubininmg-01.png" alt="">
+                <img src="../img/Mail/Yuubininmg-02.png" alt="">
+                <img src="../img/Mail/Yuubininmg-03.png" alt="">
+                <img src="../img/Mail/headerimg-01.png" alt="">
+                <img src="../img/Mail/headerimg-02.png" alt="">
+                <img src="../img/Mail/headerimg-03.png" alt="">
+            </div>
+        </div>
+
+        <!-- 2段目 -->
+        <div class="photo-track reverse">
+            <div class="photo-track-inner">
+                <img src="../img/Mail/Sakunaimg-01.webp" alt="">
+                <img src="../img/Mail/Sakunaimg-02.png" alt="">
+                <img src="../img/Mail/Sakunaimg-03.png" alt="">
+                <img src="../img/Mail/Yuubininmg-01.png" alt="">
+                <img src="../img/Mail/Yuubininmg-02.png" alt="">
+                <img src="../img/Mail/Yuubininmg-03.png" alt="">
+                <img src="../img/Mail/headerimg-01.png" alt="">
+                <img src="../img/Mail/headerimg-02.png" alt="">
+                <img src="../img/Mail/headerimg-03.png" alt="">
+
+                <!-- 繰り返し用 -->
+                <img src="../img/Mail/Sakunaimg-01.webp" alt="">
+                <img src="../img/Mail/Sakunaimg-02.png" alt="">
+                <img src="../img/Mail/Sakunaimg-03.png" alt="">
+                <img src="../img/Mail/Yuubininmg-01.png" alt="">
+                <img src="../img/Mail/Yuubininmg-02.png" alt="">
+                <img src="../img/Mail/Yuubininmg-03.png" alt="">
+                <img src="../img/Mail/headerimg-01.png" alt="">
+                <img src="../img/Mail/headerimg-02.png" alt="">
+                <img src="../img/Mail/headerimg-03.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a href="../index.html" class="site-logo">
+                💌 郵便屋さん
+            </a>
+
+            <nav class="header-nav">
+                <a href="../index.html">HOME</a>
+                <a href="Yosegaki.html">寄せ書き</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- メイン -->
+    <main>
+
+        <!-- ページタイトル -->
+        <section class="letters-hero">
+
+            <p class="section-subtitle">
+                MEMBER LETTERS
+            </p>
+
+            <h1>
+                💌 みんなからのお手紙
+            </h1>
+
+            <p>
+                郵便屋さんメンバーからの<br>
+                想いが詰まったお手紙をお届けします。
+            </p>
+
+            <div class="letters-decoration">
+                <img src="../img/Mail/Sakunaimg-01.webp" alt="" class="member-photo">
+            </div>
+
+        </section>
+
+
+        <!-- お手紙一覧 -->
+        <section class="letters-section">
+
+            <div class="section-heading">
+
+                <p class="section-subtitle">
+                    LETTER LIST
+                </p>
+
+                <h2>
+                    お手紙一覧
+                </h2>
+
+                <p class="section-description">
+                    読みたいお手紙を選択してください。
+                </p>
+
+            </div>
+
+
+            <!-- メンバー一覧 -->
+            <div class="envelope-grid" id="envelope-list">
+
+                <!-- メンバーA -->
+                <button class="envelope-card" type="button" data-member="member-a">
+
+                    <!--<img src="../img/neruneko.jpg" alt="ねるねこの写真" class="member-photo">-->
+
+                    <span class="envelope-icon">💌</span>
+
+                    <span class="envelope-name">
+                        ねるねこ
+                    </span>
+
+                    <span class="envelope-guide">
+                        お手紙を読む
+                    </span>
+
+                </button>
+
+
+                <!-- メンバーB -->
+                <button class="envelope-card" type="button" data-member="member-b">
+
+                    <img src="../img/nekoko.jpg" alt="ラーメン大好きねここさんの写真" class="member-photo">
+
+                    <span class="envelope-name">
+                        ラーメン大好きねここさん
+                    </span>
+
+                    <span class="envelope-guide">
+                        お手紙を読む
+                    </span>
+
+                </button>
+
+
+                <!-- メンバーC -->
+                <button class="envelope-card" type="button" data-member="member-c">
+
+                    <!--<img src="../img/ramune.jpg" alt="ラムネの写真" class="member-photo">-->
+
+                    <span class="envelope-icon">💌</span>
+
+                    <span class="envelope-name">
+                        ラムネ
+                    </span>
+
+                    <span class="envelope-guide">
+                        お手紙を読む
+                    </span>
+
+                </button>
+
+
+
+                <!-- メンバーD -->
+                <button class="envelope-card" type="button" data-member="member-d">
+
+                    <img src="../img/hikarun.jpg" alt="ひかるんの写真" class="member-photo">
+
+                    <span class="envelope-name">
+                        ひかるん
+                    </span>
+
+                    <span class="envelope-guide">
+                        お手紙を読む
+                    </span>
+
+                </button>
+
+                <!-- メンバーE -->
+                <button class="envelope-card" type="button" data-member="member-e">
+
+                    <!--<img src="../img/hanebito.jpg" alt="はねびとの写真" class="member-photo">-->
+
+                    <span class="envelope-icon">💌</span>
+
+                    <span class="envelope-name">
+                        はねびと
+                    </span>
+
+                    <span class="envelope-guide">
+                        お手紙を読む
+                    </span>
+
+                </button>
+
+                <!-- メンバーF -->
+                <button class="envelope-card" type="button" data-member="member-f">
+
+                    <img src="../img/kazuitu.jpg" alt="kazuituの写真" class="member-photo">
+
+                    <span class="envelope-name">
+                        kazuitu
+                    </span>
+
+                    <span class="envelope-guide">
+                        お手紙を読む
+                    </span>
+
+                </button>
+
+
+            </div>
+
+            <!-- 手紙を開くエリア -->
+            <div class="letter-view" id="letter-view" hidden>
+
+                <div class="letter-paper">
+
+                    <p class="letter-paper-subtitle">
+                        SAKUFAMI LETTER
+                    </p>
+
+                    <h2 id="letter-name">
+                        メンバー名
+                    </h2>
+
+                    <div class="letter-divider">
+                        ♡ ───────── ♡
+                    </div>
+
+                    <div class="letter-content" id="letter-content">
+                        ここにお手紙の内容が表示されます。
+                    </div>
+
+                    <p class="letter-sign">
+                        WITH ALL MY LOVE 💌
+                    </p>
+
+                </div>
+
+                <button type="button" class="letter-close-button" id="letter-close">
+
+                    ← お手紙一覧に戻る
+
+                </button>
+
+            </div>
+            <!-- 締めのメッセージ -->
+            <div class="letter-footer-message">
+
+                <p>
+                    ♡ WITH ALL MY LOVE ♡
+                </p>
+
+                <small>
+                    さくなだふぁみりあの郵便屋さん
+                </small>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+
+        <p class="footer-notice">
+            当サイトはファンが個人運営する非公式のファンサイトです。
+            <br>結城さくなさんとは一切関係ありません。
+        </p>
+        <br>
+        <p class="footer-notice">
+            当サイトで使用しているイラストは「はゅ先生」の承諾を得て使用しています。
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="../JS/common.js"></script>
+
+</body>
+
+</html>
