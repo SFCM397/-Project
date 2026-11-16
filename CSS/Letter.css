@@ -1655,7 +1655,7 @@ main {
 
     /* 1段目だけ速くする */
     .photo-track:not(.reverse) .photo-track-inner {
-        animation-duration: 40s;
+        animation-duration: 45s;
     }
 
 }
