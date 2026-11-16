@@ -712,7 +712,7 @@ body {
     display: flex;
     width: max-content;
     gap: 25px;
-    animation: photo-slide 55s linear infinite;
+    animation: photo-slide 45s linear infinite;
 }
 
 /* 反対方向に流す */
