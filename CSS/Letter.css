@@ -1645,3 +1645,17 @@ main {
         object-fit: contain;
     }
 }
+
+
+/* ==============================
+   スマホ：背景写真1段目の速度調整
+============================== */
+
+@media screen and (max-width: 600px) {
+
+    /* 1段目だけ速くする */
+    .photo-track:not(.reverse) .photo-track-inner {
+        animation-duration: 40s;
+    }
+
+}
