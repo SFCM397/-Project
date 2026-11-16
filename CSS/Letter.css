@@ -1601,3 +1601,47 @@ main {
 .letter-view[hidden] {
     display: none;
 }
+
+
+
+
+/* =====================================
+   背景写真：元の比率を維持して表示
+===================================== */
+
+.photo-track-inner {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.photo-track img {
+    width: auto;
+    height: 120px;
+
+    /* 元の画像比率を維持 */
+    object-fit: contain;
+
+    /* 画像の余白を作らない */
+    background: transparent;
+
+    border: 3px solid #FFFFFF;
+    border-radius: 15px;
+
+    /* 画像が縮小されないようにする */
+    flex-shrink: 0;
+}
+
+/* スマートフォン */
+@media screen and (max-width: 600px) {
+
+    .photo-track-inner {
+        gap: 15px;
+    }
+
+    .photo-track img {
+        width: auto;
+        height: 85px;
+        object-fit: contain;
+    }
+}
