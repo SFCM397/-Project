@@ -779,21 +779,26 @@ main,
 
 .hero-collage {
     position: relative;
+
     width: 100%;
-    max-width: 650px;
-    height: 245px;
+    max-width: 780px;
+    height: 230px;
+
     margin: 35px auto 10px;
 }
 
-/* 写真の共通設定 */
+/* 写真共通 */
 .collage-photo {
     position: absolute;
+
     left: 50%;
     top: 50%;
 
-    width: 125px;
-    height: 125px;
+    width: 110px;
+    height: 110px;
     padding: 6px;
+
+    box-sizing: border-box;
 
     background: #FFFFFF;
     border: 1px solid #F7D5E3;
@@ -802,7 +807,6 @@ main,
     box-shadow: 0 5px 15px rgba(150, 90, 120, 0.18);
 }
 
-/* 写真本体 */
 .collage-photo img {
     display: block;
     width: 100%;
@@ -811,158 +815,230 @@ main,
     border-radius: 4px;
 }
 
-/* 1枚目 */
+/* 左側3枚 */
 .photo-1 {
-    transform: translate(-270%, -35%) rotate(-10deg);
-    z-index: 1;
-}
-
-/* 2枚目 */
-.photo-2 {
-    transform: translate(-200%, -85%) rotate(7deg);
-    z-index: 1;
-}
-
-/* 3枚目 */
-.photo-3 {
-    transform: translate(-130%, -30%) rotate(-6deg);
-    z-index: 3;
-}
-
-/* 7枚目：中央のメイン写真 */
-.photo-7 {
-    width: 140px;
-    height: 140px;
-    transform: translate(-50%, -90%) rotate(4deg);
-    z-index: 4;
-}
-
-/* 5枚目 */
-.photo-5 {
-    transform: translate(20%, -25%) rotate(8deg);
-    z-index: 3;
-}
-
-/* 6枚目 */
-.photo-6 {
-    transform: translate(90%, -85%) rotate(-7deg);
+    transform: translate(-50%, -50%) translateX(-315px) rotate(-10deg);
     z-index: 2;
 }
 
-/* 4枚目 */
+.photo-2 {
+    transform: translate(-50%, -50%) translateX(-210px) translateY(-35px) rotate(7deg);
+    z-index: 3;
+}
+
+.photo-3 {
+    transform: translate(-50%, -50%) translateX(-105px) translateY(15px) rotate(-6deg);
+    z-index: 4;
+}
+
+/* 中央：郵便局さん */
+.photo-7 {
+    width: 140px;
+    height: 140px;
+
+    transform: translate(-50%, -50%) rotate(4deg);
+    z-index: 5;
+}
+
+/* 右側3枚 */
+.photo-5 {
+    transform: translate(-50%, -50%) translateX(105px) translateY(15px) rotate(8deg);
+    z-index: 4;
+}
+
+.photo-6 {
+    transform: translate(-50%, -50%) translateX(210px) translateY(-35px) rotate(-7deg);
+    z-index: 3;
+}
+
 .photo-4 {
-    transform: translate(175%, -35%) rotate(10deg);
-    z-index: 1;
+    transform: translate(-50%, -50%) translateX(315px) rotate(10deg);
+    z-index: 2;
 }
 
 /* ハート */
 .collage-heart {
     position: absolute;
-    top: 0;
-    left: 18%;
-    z-index: 5;
+    top: 5px;
+    left: 12%;
+    z-index: 6;
+
     color: #ED83AA;
-    font-size: 32px;
-    transform: rotate(-15deg);
+    font-size: 30px;
 }
 
 /* 封筒 */
 .collage-envelope {
     position: absolute;
-    right: 15%;
-    bottom: 0;
-    z-index: 5;
-    font-size: 38px;
-    transform: rotate(12deg);
+    right: 12%;
+    bottom: 5px;
+    z-index: 6;
+
+    font-size: 32px;
 }
 
-/* 切手風装飾 */
-.collage-stamp {
-    position: absolute;
-    left: 5%;
-    bottom: 0;
-    z-index: 5;
 
-    padding: 7px 9px;
-    background: #FFF8FB;
-    border: 2px dashed #E9A5C0;
-    border-radius: 5px;
+/* =========================
+   スマートフォン対応
+========================= */
 
-    color: #C66D93;
-    font-size: 9px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.4;
-
-    transform: rotate(-8deg);
-}
-
-/* スマートフォン対応 */
 @media screen and (max-width: 600px) {
 
     .hero-collage {
-        max-width: 340px;
+        width: 100%;
+        max-width: 360px;
         height: 190px;
+
         margin: 25px auto 10px;
     }
 
     .collage-photo {
-        width: 78px;
-        height: 78px;
+        width: clamp(52px, 16vw, 64px);
+        height: clamp(52px, 16vw, 64px);
         padding: 4px;
     }
 
+    /* 左側3枚 */
     .photo-1 {
-        transform: translate(-210%, 5%) rotate(-10deg);
+        transform: translate(-50%, -50%) translateX(-90px) translateY(10px) rotate(-10deg);
     }
 
     .photo-2 {
-        transform: translate(-155%, -75%) rotate(7deg);
+        transform: translate(-50%, -50%) translateX(-60px) translateY(-35px) rotate(7deg);
     }
 
     .photo-3 {
-        transform: translate(-100%, 15%) rotate(-6deg);
+        transform: translate(-50%, -50%) translateX(-30px) translateY(25px) rotate(-6deg);
     }
 
-    .photo-4 {
-        width: 90px;
-        height: 90px;
-        transform: translate(-50%, -85%) rotate(4deg);
+    /* 中央：郵便局さん */
+    .photo-7 {
+        width: 80px;
+        height: 80px;
+
+        transform: translate(-50%, -50%) rotate(4deg);
+        z-index: 5;
     }
 
+    /* 右側3枚 */
     .photo-5 {
-        transform: translate(0%, 20%) rotate(8deg);
+        transform: translate(-50%, -50%) translateX(30px) translateY(25px) rotate(8deg);
     }
 
     .photo-6 {
-        transform: translate(55%, -75%) rotate(-7deg);
+        transform: translate(-50%, -50%) translateX(60px) translateY(-35px) rotate(-7deg);
     }
 
-    .photo-7 {
-        transform: translate(110%, 5%) rotate(10deg);
+    .photo-4 {
+        transform: translate(-50%, -50%) translateX(90px) translateY(10px) rotate(10deg);
     }
 
     .collage-heart {
-        left: 10%;
         top: 0;
-        font-size: 24px;
+        left: 5%;
+        font-size: 23px;
     }
 
     .collage-envelope {
         right: 5%;
         bottom: 0;
-        font-size: 27px;
-    }
-
-    .collage-stamp {
-        left: 0;
-        bottom: 0;
-        font-size: 7px;
-        padding: 5px;
+        font-size: 25px;
     }
 
 }
 
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .hero-collage {
+        width: 100%;
+        max-width: 360px;
+        height: 190px;
+
+        margin: 25px auto 10px;
+    }
+
+    .collage-photo {
+        width: clamp(52px, 17vw, 68px);
+        height: clamp(52px, 17vw, 68px);
+
+        padding: 4px;
+
+        left: calc(50% + var(--photo-position));
+        top: var(--photo-top);
+    }
+
+    /* 左側3枚 */
+    .photo-1 {
+        --photo-position: calc(-3 * clamp(24px, 11vw, 38px));
+        --photo-top: 48%;
+
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+
+    .photo-2 {
+        --photo-position: calc(-2 * clamp(24px, 11vw, 38px));
+        --photo-top: 32%;
+
+        transform: translate(-50%, -50%) rotate(7deg);
+    }
+
+    .photo-3 {
+        --photo-position: calc(-1 * clamp(24px, 11vw, 38px));
+        --photo-top: 58%;
+
+        transform: translate(-50%, -50%) rotate(-6deg);
+    }
+
+    /* 右側3枚 */
+    .photo-5 {
+        --photo-position: clamp(24px, 11vw, 38px);
+        --photo-top: 58%;
+
+        transform: translate(-50%, -50%) rotate(8deg);
+    }
+
+    .photo-6 {
+        --photo-position: calc(2 * clamp(24px, 11vw, 38px));
+        --photo-top: 32%;
+
+        transform: translate(-50%, -50%) rotate(-7deg);
+    }
+
+    
+/* 4枚目：右端 */
+.photo-4 {
+    transform: translate(-50%, -50%) translateX(315px) rotate(10deg);
+    z-index: 2;
+}
+
+/* 7枚目：中央のメイン写真 */
+.photo-7 {
+    width: 135px;
+    height: 135px;
+
+    transform: translate(-50%, -50%) rotate(4deg);
+    z-index: 5;
+}
+
+
+    .collage-heart {
+        top: 0;
+        left: 8%;
+        font-size: 23px;
+    }
+
+    .collage-envelope {
+        right: 5%;
+        bottom: 0;
+        font-size: 25px;
+    }
+
+}
 
 
 /* スマホ表示 */
@@ -980,42 +1056,67 @@ main,
         padding: 4px;
     }
 
-    .photo-1 {
-        left: 0;
-        top: 65px;
-    }
 
-    .photo-2 {
-        left: 43px;
-        top: 15px;
-    }
+/* 左側3枚 */
 
-    .photo-3 {
-        left: 86px;
-        top: 75px;
-    }
+.photo-1 {
+    --photo-position: calc(-3 * clamp(24px, 10vw, 36px));
+    --photo-top: 48%;
 
-    .photo-4 {
-        left: 129px;
-        top: 10px;
-        width: 90px;
-        height: 90px;
-    }
+    transform: translate(-50%, -50%) rotate(-10deg);
+}
 
-    .photo-5 {
-        left: 172px;
-        top: 80px;
-    }
+.photo-2 {
+    --photo-position: calc(-2 * clamp(24px, 10vw, 36px));
+    --photo-top: 32%;
 
-    .photo-6 {
-        left: 215px;
-        top: 15px;
-    }
+    transform: translate(-50%, -50%) rotate(7deg);
+}
 
-    .photo-7 {
-        left: 258px;
-        top: 70px;
-    }
+.photo-3 {
+    --photo-position: calc(-1 * clamp(24px, 10vw, 36px));
+    --photo-top: 58%;
+
+    transform: translate(-50%, -50%) rotate(-6deg);
+}
+
+/* 中央：7枚目の郵便局さん */
+
+.photo-7 {
+    width: clamp(66px, 21vw, 82px);
+    height: clamp(66px, 21vw, 82px);
+
+    --photo-position: 0px;
+    --photo-top: 42%;
+
+    transform: translate(-50%, -50%) rotate(4deg);
+
+    z-index: 5;
+}
+
+/* 右側3枚 */
+
+.photo-5 {
+    --photo-position: clamp(24px, 10vw, 36px);
+    --photo-top: 58%;
+
+    transform: translate(-50%, -50%) rotate(8deg);
+}
+
+.photo-6 {
+    --photo-position: calc(2 * clamp(24px, 10vw, 36px));
+    --photo-top: 32%;
+
+    transform: translate(-50%, -50%) rotate(-7deg);
+}
+
+.photo-4 {
+    --photo-position: calc(3 * clamp(24px, 10vw, 36px));
+    --photo-top: 48%;
+
+    transform: translate(-50%, -50%) rotate(10deg);
+}
+
 
     .collage-heart {
         left: 30px;
@@ -1036,4 +1137,467 @@ main,
         padding: 5px;
     }
 
+}
+
+
+/* ==============================
+   手紙表示：スマートフォン最適化
+============================== */
+
+@media screen and (max-width: 600px) {
+
+    /* 手紙を表示する全画面エリア */
+    .letter-view {
+        position: fixed;
+        inset: 0;
+
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+
+        padding: 15px 12px;
+        box-sizing: border-box;
+
+        /* 上から順番に表示する */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        /* 画面からはみ出した分をスクロール */
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        /* スクロールの操作性 */
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: contain;
+
+        gap: 15px;
+    }
+
+    /* 便箋本体 */
+    .letter-paper {
+        width: 100%;
+        max-width: 850px;
+
+        /* 固定の高さを設けず文章に合わせる */
+        height: auto;
+        min-height: 0;
+
+        /* 文章が長くても縮まない */
+        flex-shrink: 0;
+
+        padding: 30px 20px;
+
+        box-sizing: border-box;
+    }
+
+    /* お手紙本文 */
+    .letter-content {
+        width: 100%;
+        min-height: 0;
+
+        font-size: 15px;
+        line-height: 2;
+
+        text-align: left;
+
+        /* スクリプト内の改行・空行を詰める */
+        white-space: normal;
+
+        /* 長い文章も便箋内で折り返す */
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* 閉じるボタン */
+    .letter-close-button {
+        margin: 0 auto 15px;
+
+        flex-shrink: 0;
+
+        width: fit-content;
+    }
+
+}
+
+
+/* ==============================
+   スマホ：手紙の横幅調整
+============================== */
+
+@media screen and (max-width: 600px) {
+
+    /* 手紙表示画面 */
+    .letter-view {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 12px 8px;
+
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* 便箋 */
+    .letter-paper {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin: 0;
+        padding: 28px 16px;
+
+        box-sizing: border-box;
+    }
+
+    /* 手紙の本文 */
+    .letter-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        font-size: 14px;
+        line-height: 2;
+
+        text-align: left;
+
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* 閉じるボタン */
+    .letter-close-button {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =================================
+   スマートフォン：ページ全体の横幅調整
+================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* ページ全体 */
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    /* ヘッダー・メイン・フッター */
+    .site-header,
+    main,
+    .site-footer {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* ヘッダー */
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 12px 10px;
+        gap: 8px;
+    }
+
+    .site-logo {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .header-nav {
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    .header-nav a {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    /* お手紙ページの見出し */
+    .letters-hero {
+        width: 100%;
+        max-width: 100%;
+        padding: 40px 12px;
+        box-sizing: border-box;
+    }
+
+    /* お手紙一覧 */
+    .letters-section {
+        width: 100%;
+        max-width: 100%;
+        margin: 35px auto;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    /* 封筒カード */
+    .envelope-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .envelope-card {
+        width: 100%;
+        min-width: 0;
+        padding: 20px 8px;
+        box-sizing: border-box;
+    }
+
+    /* メンバー写真 */
+    .member-photo {
+        max-width: 100%;
+    }
+
+    /* 背景写真 */
+    .photo-background {
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .photo-track {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* 7枚の写真コラージュ */
+    .hero-collage {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /* 手紙表示画面 */
+    .letter-view {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .letter-paper {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+}
+
+
+
+/* ==============================
+   スマホ：密集した7枚の写真コラージュ
+============================== */
+
+@media screen and (max-width: 600px) {
+
+    /* コラージュ全体 */
+    .hero-collage {
+        position: relative;
+
+        width: 100%;
+        max-width: 360px;
+        height: 220px;
+
+        margin: 25px auto 15px;
+        overflow: visible;
+    }
+
+    /* 写真共通 */
+    .collage-photo {
+        position: absolute;
+
+        width: 70px;
+        height: 70px;
+        padding: 4px;
+
+        box-sizing: border-box;
+
+        left: 50%;
+        top: 50%;
+    }
+
+    
+/* 上段 */
+.photo-1 {
+    left: 23%; /* 20%から変更 */
+    top: 45px;
+}
+
+.photo-2 {
+    left: 50%;
+    top: 45px;
+}
+
+.photo-3 {
+    left: 77%; /* 80%から変更 */
+    top: 45px;
+}
+
+/* 下段 */
+.photo-5 {
+    left: 23%; /* 20%から変更 */
+    top: 179px;
+}
+
+.photo-6 {
+    left: 50%;
+    top: 179px;
+}
+
+.photo-4 {
+    left: 77%; /* 80%から変更 */
+    top: 179px;
+}
+
+
+    /* ハート */
+    .collage-heart {
+        left: 3%;
+        top: 5px;
+        font-size: 22px;
+    }
+
+    /* 封筒 */
+    .collage-envelope {
+        right: 3%;
+        bottom: 0;
+        font-size: 24px;
+    }
+
+}
+
+
+/* ==============================
+   手紙表示：スマホで戻るボタンが隠れないようにする
+============================== */
+
+.letter-view {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+
+    /* 上から順番に表示 */
+    justify-content: flex-start;
+    align-items: center;
+
+    /* 手紙とボタンをまとめてスクロール */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 25px 15px 35px;
+}
+
+/* 手紙本体 */
+.letter-paper {
+    width: 100%;
+    max-width: 850px;
+
+    /* 文章の長さに合わせて高さを調整 */
+    min-height: auto;
+    height: auto;
+
+    flex-shrink: 0;
+
+    padding: 45px 40px;
+}
+
+/* 一覧に戻るボタン */
+.letter-close-button {
+    position: relative;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    margin: 20px auto 0;
+
+    /* 下部に余白を確保 */
+    margin-bottom: 10px;
+}
+
+/* スマートフォン */
+@media screen and (max-width: 600px) {
+
+    .letter-view {
+        padding: 20px 12px calc(30px + env(safe-area-inset-bottom));
+    }
+
+    .letter-paper {
+        width: 100%;
+        min-height: auto;
+
+        padding: 30px 20px;
+    }
+
+    .letter-content {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .letter-close-button {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+}
+
+
+/* ==============================
+   手紙を開いたときの表示順を修正
+============================== */
+
+/* メイン部分をフッターより手前にする */
+main {
+    position: relative;
+    z-index: 2;
+}
+
+/* フッターをメイン部分より背面にする */
+.site-footer {
+    position: relative;
+    z-index: 0;
+}
+
+/* 手紙の表示エリア */
+.letter-view {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    /* フッターが透けないようにする */
+    background: #FFEBF3;
+}
+
+/* 手紙を閉じているとき */
+.letter-view[hidden] {
+    display: none;
 }
