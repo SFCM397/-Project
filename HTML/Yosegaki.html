@@ -84,12 +84,14 @@
 
         <div class="header-inner">
 
-            <a href="../index.html" class="site-logo">
+            <a href="../index.html" class="site-logo" onclick="sessionStorage.setItem('sakunaInternalMove', '1')">
                 💌 郵便屋さん
             </a>
 
             <nav class="header-nav">
-                <a href="../index.html">HOME</a>
+                <a href="../index.html" onclick="sessionStorage.setItem('sakunaInternalMove', '1')">
+                    HOME
+                </a>
                 <a href="Yosegaki.html">寄せ書き</a>
             </nav>
 
@@ -117,52 +119,52 @@
                 想いが詰まったお手紙をお届けします。
             </p>
 
-            
-
-<!-- 7枚の写真コラージュ -->
-<div class="hero-collage">
-
-    <!-- ねるねこ -->
-    <div class="collage-photo photo-1">
-        <img src="../img/neruneko.jpg" alt="ねるねこの写真">
-    </div>
-
-    <!-- ねここ -->
-    <div class="collage-photo photo-2">
-        <img src="../img/nekoko.jpg" alt="ねここさんの写真">
-    </div>
-
-    <!-- ラムネ -->
-    <div class="collage-photo photo-3">
-        <img src="../img/ramune.jpg" alt="ラムネの写真">
-    </div>
-
-    <!-- 郵便局さん -->
-    <div class="collage-photo photo-7">
-        <img src="../img/Mail/Yuubininmg-01.png" alt="郵便局さんの写真">
-    </div>
-
-    <!-- ひかるん -->
-    <div class="collage-photo photo-4">
-        <img src="../img/hikarun.jpg" alt="ひかるんの写真">
-    </div>
-
-    <!-- はねびと -->
-    <div class="collage-photo photo-5">
-        <img src="../img/hanebito.jpg" alt="はねびとの写真">
-    </div>
-
-    <!-- kazuitu -->
-    <div class="collage-photo photo-6">
-        <img src="../img/kazuitu.jpg" alt="kazuituの写真">
-    </div>
 
 
-    <!-- 郵便モチーフの装飾 -->
-    <span class="collage-heart">♡</span>
-    <span class="collage-envelope">💌</span>
+            <!-- 7枚の写真コラージュ -->
+            <div class="hero-collage">
 
-</div>
+                <!-- ねるねこ -->
+                <div class="collage-photo photo-1">
+                    <img src="../img/neruneko.jpg" alt="ねるねこの写真">
+                </div>
+
+                <!-- ねここ -->
+                <div class="collage-photo photo-2">
+                    <img src="../img/nekoko.jpg" alt="ねここさんの写真">
+                </div>
+
+                <!-- ラムネ -->
+                <div class="collage-photo photo-3">
+                    <img src="../img/ramune.jpg" alt="ラムネの写真">
+                </div>
+
+                <!-- 郵便局さん -->
+                <div class="collage-photo photo-7">
+                    <img src="../img/Mail/Yuubininmg-01.png" alt="郵便局さんの写真">
+                </div>
+
+                <!-- ひかるん -->
+                <div class="collage-photo photo-4">
+                    <img src="../img/hikarun.jpg" alt="ひかるんの写真">
+                </div>
+
+                <!-- はねびと -->
+                <div class="collage-photo photo-5">
+                    <img src="../img/hanebito.jpg" alt="はねびとの写真">
+                </div>
+
+                <!-- kazuitu -->
+                <div class="collage-photo photo-6">
+                    <img src="../img/kazuitu.jpg" alt="kazuituの写真">
+                </div>
+
+
+                <!-- 郵便モチーフの装飾 -->
+                <span class="collage-heart">♡</span>
+                <span class="collage-envelope">💌</span>
+
+            </div>
 
 
 
@@ -358,19 +360,21 @@
 
     <!-- JavaScript -->
     <script src="../JS/common.js"></script>
-    
-    <script>
-    (function () {
-     
-      const navigation = performance.getEntriesByType("navigation")[0];
 
-          if (navigation && navigation.type === "reload") {
-        const script = document.createElement("script");
-        script.src = "../JS/sakuna-opening.js";
-        document.body.appendChild(script);
-      }
-    })();
-  </script>
+
+
+    <script>
+        (function () {
+
+            const navigation = performance.getEntriesByType("navigation")[0];
+
+            if (navigation && navigation.type === "reload") {
+                const script = document.createElement("script");
+                script.src = "../JS/sakuna-opening.js";
+                document.body.appendChild(script);
+            }
+        })();
+    </script>
 
 </body>
 
