@@ -63,9 +63,9 @@ body {
 
 .hero {
     width: 100%;
-    min-height: 400px;
 
-    padding: 70px 20px;
+    /* 背景画像の比率に合わせる（仮設定） */
+    aspect-ratio: 16 / 6;
 
     display: flex;
     justify-content: center;
@@ -73,10 +73,14 @@ body {
 
     text-align: center;
 
-    background: linear-gradient(135deg,
-            #FCE4ED,
-            #FFF5F8,
-            #F9DFE9);
+    /* 背景画像 */
+    background-image: url("../img/Mail/headerimg-01.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    /* 画像の周囲にできる余白の色 */
+    background-color: #FFF5F8;
 }
 
 .hero-content {
@@ -264,8 +268,15 @@ body {
     }
 
     .hero {
-        min-height: 330px;
-        padding: 50px 15px;
+        width: 100%;
+        aspect-ratio: 16 / 6;
+
+        min-height: 0;
+        padding: 0;
+
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
 
     .hero-description {
@@ -1009,21 +1020,21 @@ main,
         transform: translate(-50%, -50%) rotate(-7deg);
     }
 
-    
-/* 4枚目：右端 */
-.photo-4 {
-    transform: translate(-50%, -50%) translateX(315px) rotate(10deg);
-    z-index: 2;
-}
 
-/* 7枚目：中央のメイン写真 */
-.photo-7 {
-    width: 135px;
-    height: 135px;
+    /* 4枚目：右端 */
+    .photo-4 {
+        transform: translate(-50%, -50%) translateX(315px) rotate(10deg);
+        z-index: 2;
+    }
 
-    transform: translate(-50%, -50%) rotate(4deg);
-    z-index: 5;
-}
+    /* 7枚目：中央のメイン写真 */
+    .photo-7 {
+        width: 135px;
+        height: 135px;
+
+        transform: translate(-50%, -50%) rotate(4deg);
+        z-index: 5;
+    }
 
 
     .collage-heart {
@@ -1057,65 +1068,65 @@ main,
     }
 
 
-/* 左側3枚 */
+    /* 左側3枚 */
 
-.photo-1 {
-    --photo-position: calc(-3 * clamp(24px, 10vw, 36px));
-    --photo-top: 48%;
+    .photo-1 {
+        --photo-position: calc(-3 * clamp(24px, 10vw, 36px));
+        --photo-top: 48%;
 
-    transform: translate(-50%, -50%) rotate(-10deg);
-}
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
 
-.photo-2 {
-    --photo-position: calc(-2 * clamp(24px, 10vw, 36px));
-    --photo-top: 32%;
+    .photo-2 {
+        --photo-position: calc(-2 * clamp(24px, 10vw, 36px));
+        --photo-top: 32%;
 
-    transform: translate(-50%, -50%) rotate(7deg);
-}
+        transform: translate(-50%, -50%) rotate(7deg);
+    }
 
-.photo-3 {
-    --photo-position: calc(-1 * clamp(24px, 10vw, 36px));
-    --photo-top: 58%;
+    .photo-3 {
+        --photo-position: calc(-1 * clamp(24px, 10vw, 36px));
+        --photo-top: 58%;
 
-    transform: translate(-50%, -50%) rotate(-6deg);
-}
+        transform: translate(-50%, -50%) rotate(-6deg);
+    }
 
-/* 中央：7枚目の郵便局さん */
+    /* 中央：7枚目の郵便局さん */
 
-.photo-7 {
-    width: clamp(66px, 21vw, 82px);
-    height: clamp(66px, 21vw, 82px);
+    .photo-7 {
+        width: clamp(66px, 21vw, 82px);
+        height: clamp(66px, 21vw, 82px);
 
-    --photo-position: 0px;
-    --photo-top: 42%;
+        --photo-position: 0px;
+        --photo-top: 42%;
 
-    transform: translate(-50%, -50%) rotate(4deg);
+        transform: translate(-50%, -50%) rotate(4deg);
 
-    z-index: 5;
-}
+        z-index: 5;
+    }
 
-/* 右側3枚 */
+    /* 右側3枚 */
 
-.photo-5 {
-    --photo-position: clamp(24px, 10vw, 36px);
-    --photo-top: 58%;
+    .photo-5 {
+        --photo-position: clamp(24px, 10vw, 36px);
+        --photo-top: 58%;
 
-    transform: translate(-50%, -50%) rotate(8deg);
-}
+        transform: translate(-50%, -50%) rotate(8deg);
+    }
 
-.photo-6 {
-    --photo-position: calc(2 * clamp(24px, 10vw, 36px));
-    --photo-top: 32%;
+    .photo-6 {
+        --photo-position: calc(2 * clamp(24px, 10vw, 36px));
+        --photo-top: 32%;
 
-    transform: translate(-50%, -50%) rotate(-7deg);
-}
+        transform: translate(-50%, -50%) rotate(-7deg);
+    }
 
-.photo-4 {
-    --photo-position: calc(3 * clamp(24px, 10vw, 36px));
-    --photo-top: 48%;
+    .photo-4 {
+        --photo-position: calc(3 * clamp(24px, 10vw, 36px));
+        --photo-top: 48%;
 
-    transform: translate(-50%, -50%) rotate(10deg);
-}
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
 
 
     .collage-heart {
@@ -1436,38 +1447,42 @@ main,
         top: 50%;
     }
 
-    
-/* 上段 */
-.photo-1 {
-    left: 23%; /* 20%から変更 */
-    top: 45px;
-}
 
-.photo-2 {
-    left: 50%;
-    top: 45px;
-}
+    /* 上段 */
+    .photo-1 {
+        left: 23%;
+        /* 20%から変更 */
+        top: 45px;
+    }
 
-.photo-3 {
-    left: 77%; /* 80%から変更 */
-    top: 45px;
-}
+    .photo-2 {
+        left: 50%;
+        top: 45px;
+    }
 
-/* 下段 */
-.photo-5 {
-    left: 23%; /* 20%から変更 */
-    top: 179px;
-}
+    .photo-3 {
+        left: 77%;
+        /* 80%から変更 */
+        top: 45px;
+    }
 
-.photo-6 {
-    left: 50%;
-    top: 179px;
-}
+    /* 下段 */
+    .photo-5 {
+        left: 23%;
+        /* 20%から変更 */
+        top: 179px;
+    }
 
-.photo-4 {
-    left: 77%; /* 80%から変更 */
-    top: 179px;
-}
+    .photo-6 {
+        left: 50%;
+        top: 179px;
+    }
+
+    .photo-4 {
+        left: 77%;
+        /* 80%から変更 */
+        top: 179px;
+    }
 
 
     /* ハート */
