@@ -1668,19 +1668,23 @@ main {
 
 .hero {
     position: relative;
-
     width: 100%;
-    min-height: 500px;
+
+    aspect-ratio: 16 / 6;
+    min-height: 0;
 
     background-image: url("../img/Mail/headerimg-01.png");
-
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-position: center;
+    background-size: contain;
+
+    background-color: #FFBFD7;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    text-align: center;
 }
 
 /* 文字部分 */
@@ -1765,4 +1769,77 @@ main {
         padding: 10px;
     }
 
+}
+
+/* ==============================
+   メインビジュアル：文字の視認性改善
+============================== */
+
+/* 背景画像の上に薄いピンクのレイヤーを重ねる */
+.hero {
+    position: relative;
+    isolation: isolate;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 245, 248, 0.45);
+
+    z-index: -1;
+}
+
+/* メインビジュアルの文字 */
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 800px;
+
+    padding: 20px;
+}
+
+/* 英字サブタイトル */
+.hero-subtitle {
+    color: #8E4567;
+    font-weight: bold;
+
+    text-shadow:
+        0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+/* メインタイトル */
+.hero h1 {
+    color: #8E3D62;
+    font-weight: bold;
+
+    text-shadow:
+        0 2px 5px rgba(255, 255, 255, 0.95),
+        0 0 12px rgba(255, 255, 255, 0.7);
+}
+
+/* 説明文 */
+.hero-description {
+    color: #7D3D5A;
+    font-weight: bold;
+
+    text-shadow:
+        0 1px 4px rgba(255, 255, 255, 0.95);
+}
+
+@media screen and (max-width: 600px) {
+    .hero-content {
+        padding: 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
 }
