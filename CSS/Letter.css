@@ -105,12 +105,6 @@ body {
     font-size: 15px;
 }
 
-.hero-decoration {
-    margin-top: 30px;
-    font-size: 30px;
-}
-
-
 /* ==============================
    共通セクション
 ============================== */
@@ -330,10 +324,7 @@ body {
     line-height: 1.9;
 }
 
-.letters-decoration {
-    margin-top: 20px;
-    font-size: 28px;
-}
+
 
 .letters-section {
     max-width: 1000px;
@@ -383,11 +374,6 @@ body {
     border-color: #E99AB9;
 }
 
-.envelope-icon {
-    font-size: 55px;
-    margin-bottom: 12px;
-}
-
 .envelope-name {
     color: #A64F78;
     font-size: 17px;
@@ -402,14 +388,6 @@ body {
 }
 
 
-/* ==============================
-   手紙表示エリア
-============================== */
-
-.letter-view {
-    max-width: 700px;
-    margin: 45px auto 0;
-}
 
 .letter-paper {
     padding: 45px 40px;
@@ -1141,13 +1119,6 @@ main,
         font-size: 27px;
     }
 
-    .collage-stamp {
-        left: 0;
-        bottom: 0;
-        font-size: 7px;
-        padding: 5px;
-    }
-
 }
 
 
@@ -1675,30 +1646,7 @@ main {
 
 }
 
-/* =================================
-   Header画像
-================================= */
 
-.header-image {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.header-image a {
-    display: block;
-    width: 100%;
-}
-
-.header-image img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-}
 
 /* スマホ表示 */
 @media screen and (max-width: 600px) {
