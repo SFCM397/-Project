@@ -17,7 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         "member-a": {
             name: "ねるねこ",
-            message: "こんさくな～"
+            message: `さくたん誕生日おめでとう！
+もう3回目だね……早いなってほんとに感じるよ
+
+活動2周年を迎えて、そして2つの『 さくたんの曲』も出せて
+さくたんが思いっきり活動出来てるって感じられてほんとに嬉しいよ！
+
+ファンボのグッズだったりでファンを大切に思って色々頑張ってくれてほんとにありがとう！
+
+さくたんがこれからも楽しく、幸せに過ごせることを心から願ってるよ！
+いつまでもずっと全力で応援してるよ！
+
+誕生日ほんとにおめでとう！
+大好きだよ！`
         },
 
         "member-b": {
@@ -106,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             letterView.hidden = false;
 
-            
+
 
         });
 
